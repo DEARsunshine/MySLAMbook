@@ -9,9 +9,10 @@ list( APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules )
 
 # 寻找G2O
 find_package( G2O REQUIRED )
-include_directories( 
-    ${G2O_INCLUDE_DIRS}
-    "/usr/include/eigen3"
+include_directories(
+        ${G2O_INCLUDE_DIRS}
+        #"/usr/include/g2o"
+        "/usr/include/eigen3"
 )
 
 # OpenCV

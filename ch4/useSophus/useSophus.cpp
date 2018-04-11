@@ -57,6 +57,7 @@ int main( int argc, char** argv )
     Vector6d update_se3; //更新量
     update_se3.setZero();
     update_se3(0,0) = 1e-4d;
+    cout<<"update_se3="<<update_se3.transpose()<<endl;
     Sophus::SE3 SE3_updated = Sophus::SE3::exp(update_se3)*SE3_Rt;
     cout<<"SE3 updated = "<<endl<<SE3_updated.matrix()<<endl;
     

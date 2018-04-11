@@ -51,7 +51,7 @@ int main( int argc, char** argv )
     // 但是在Eigen里你不能混合两种不同类型的矩阵，像这样是错的
     // Eigen::Matrix<double, 2, 1> result_wrong_type = matrix_23 * v_3d;
     // 应该显式转换
-    Eigen::Matrix<double, 2, 1> result = matrix_23.cast<double>() * v_3d;
+    Eigen::Matrix<double, 2, 1> result = matrix_23.cast<double>() * v_3d;  //cast<double>()强制转化为double
     cout << result << endl;
 
     Eigen::Matrix<float, 2, 1> result2 = matrix_23 * vd_3d;
